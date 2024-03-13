@@ -11,22 +11,27 @@ const display_projects = ()=>{
   projects_show.value = true
 }
 
-const type_div = (id) => {
+const type_div = (id:string) => {
   let div = document.getElementById(id);
-  div.classList.remove("hidden")
-  let text_holder = div.innerHTML;
-  let text_fill = "";
+  if(div != null){
+    div.classList.remove("hidden")
+    let text_holder = div.innerHTML;
+    let text_fill = "";
 
-  // Clear the existing content before typing
-  div.innerHTML = "";
+    // Clear the existing content before typing
+    div.innerHTML = "";
 
-  // Loop through each character and add a delay for the effect
-  for (let i = 0; i < text_holder?.length; i++) {
-    setTimeout(() => {
-      text_fill += text_holder[i];
-      div.innerHTML = text_fill; // Update the content with each character
-    }, i * 50); // Adjust the delay (50ms here) for typing speed
-  }
+    // Loop through each character and add a delay for the effect
+    for (let i = 0; i < text_holder?.length; i++) {
+      setTimeout(() => {
+        text_fill += text_holder[i];
+        if(div != null){
+          div.innerHTML = text_fill; // Update the content with each character
+        }
+      }, i * 50); // Adjust the delay (50ms here) for typing speed
+    }
+    }
+
 };
 
 
