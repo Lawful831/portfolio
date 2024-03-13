@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: "Remington";
+  color: rgba(0, 0, 0, 1);
+  background-color: #f0e0af;
+  --pad: max(20px, 4vmin);
+}
+
+@font-face {
+  font-family: "Remington";
+  src: local("Remington"),   url(./fonts/SilkRemington.ttf) format("truetype");
+}
+
+
+
